@@ -11,7 +11,6 @@ public class TestGerente {
 		gerente.setClave("AluraCursosOnline");
 		
 		
-		System.out.println(gerente.getSalario());
 		System.out.println(gerente.getBonificacion());
 		System.out.println(gerente.iniciarSesion("AluraCursosOnline"));
 

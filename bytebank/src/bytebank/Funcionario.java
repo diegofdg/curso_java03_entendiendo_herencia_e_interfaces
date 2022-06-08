@@ -38,13 +38,7 @@ public class Funcionario {
         this.tipo = tipo;
     }
 	
-	public double getBonificacion() {
-		if (this.tipo == 0) { // Funcionário comun;
-            return this.salario * 0.1;
-        } else if (this.tipo == 1) { // Gerente;
-            return this.salario;
-        } else {
-            return 0;
-        }
-	}
+    public double getBonificacion() {
+        return this.salario * 0.1;
+    }
 }
