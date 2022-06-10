@@ -2,24 +2,20 @@ package bytebank;
 
 public class Gerente extends Funcionario implements Autenticable {
 	
-	private String clave;
+	private AutenticacionUtil util;
 
-    public String getClave() {
-        return clave;
+    public Gerente() {
+        this.util = new AutenticacionUtil();
     }
     
     @Override
     public void setClave(String clave) {
-        this.clave = clave;
+    	this.util.setClave(clave);
     }
     
     @Override
     public boolean iniciarSesion(String clave) {
-        if(this.clave == clave) {
-            return true;
-        } else {
-            return false;
-        }
+    	return this.util.iniciarSesion(clave);
     }
     
     @Override
