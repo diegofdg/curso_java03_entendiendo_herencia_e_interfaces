@@ -1,6 +1,7 @@
 package bytebank;
 
 public abstract class Cuenta {
+	
 	protected double saldo;
     private int agencia;
     private int numero;

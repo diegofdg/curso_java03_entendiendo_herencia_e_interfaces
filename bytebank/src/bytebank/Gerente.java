@@ -1,16 +1,19 @@
 package bytebank;
-//                   extiende de
-public class Gerente extends Funcionario {
+
+public class Gerente extends Funcionario implements Autenticable {
+	
 	private String clave;
 
     public String getClave() {
         return clave;
     }
-
+    
+    @Override
     public void setClave(String clave) {
         this.clave = clave;
     }
-
+    
+    @Override
     public boolean iniciarSesion(String clave) {
         if(this.clave == clave) {
             return true;
@@ -19,7 +22,6 @@ public class Gerente extends Funcionario {
         }
     }
     
-    // Sobre-escritura del método
     @Override
     public double getBonificacion() {
     	System.out.println("Ejecutando desde Gerente");
